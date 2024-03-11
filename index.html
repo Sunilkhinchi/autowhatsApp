@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Message</title>
+<script>
+// Yaha par apna message aur number set karo
+var message = "Tumhara dost hu mai";
+var phoneNumber = "+91 7014346716"; // Number ke international format mein
+
+// Jab webpage load hoti hai, ye function trigger hota hai
+window.onload = function() {
+    // Message send karne ke liye link banao
+    var whatsappLink = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+    // Redirect to WhatsApp with the message
+    window.location.href = whatsappLink;
+};
+</script>
+</head>
+<body>
+<!-- Kuch content ya redirection message ke liye -->
+<p>Please wait while we redirect you to WhatsApp...</p>
+</body>
+</html>
